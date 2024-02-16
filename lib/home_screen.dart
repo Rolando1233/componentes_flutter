@@ -10,27 +10,28 @@ class HomeScreen extends StatelessWidget {
           title: const Text('Componentes de flutter'),
         ),
         body: ListView(
-          children: const [
+          children: [
             ListTile(
-              leading: Icon(Icons.mode_fan_off),
-            title: Text('Hola mundo',
-              style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 25),),
-            subtitle: Text('Adios mundo'),
-            trailing: Icon(Icons.arrow_circle_right),
+              leading: const Icon(Icons.mode_fan_off),
+            title: Text('Hola mundo', 
+              style: Theme.of(context).textTheme.headlineLarge,
+              ),
+            subtitle: const Text('Adios mundo'),
+            trailing: const  Icon(Icons.arrow_circle_right),
             ),
-            Divider(),
+            const Divider(),
             ListTile(
-              leading: Icon(Icons.flight),
+              leading: const Icon(Icons.flight),
             title: Text('Hola mundo',
-              style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold,fontSize: 25),),
+              style: Theme.of(context).textTheme.headlineLarge,
+              ),
             subtitle: Text('Adios mundo'),
             trailing: Icon(Icons.arrow_circle_right),
             ),
             Divider(),
             ListTile(
               leading: Icon(Icons.ac_unit_sharp),
-            title: Text('Hola mundo',
-              style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 25),),
+            title: Text('Hola mundo'),
             subtitle: Text('Adios mundo'),
             trailing: Icon(Icons.arrow_circle_right),
             )
