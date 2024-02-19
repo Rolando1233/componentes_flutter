@@ -28,16 +28,15 @@ class HomeScreen extends StatelessWidget {
             subtitle: const Text('Scroll Infinito'),
             trailing: const Icon(Icons.arrow_circle_right),
             ),
-            const Divider(),
+            const Divider(), 
             ListTile(
               leading: const Icon(Icons.notification_add),
             title: Text('Notificaciones',
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
             subtitle: const Text('Creación de notificaciones'),
-            trailing: const Icon(Icons.arrow_circle_right),
+            trailing: const Icon(Icons.arrow_circle_right, ),
             )
-
           ],
         ),
       );
