@@ -12,28 +12,30 @@ class HomeScreen extends StatelessWidget {
         body: ListView(
           children: [
             ListTile(
-              leading: const Icon(Icons.mode_fan_off),
-            title: Text('Hola mundo', 
+            leading: const Icon(Icons.input_outlined),
+            title: Text('Entradas',
               style: Theme.of(context).textTheme.headlineLarge,
               ),
-            subtitle: const Text('Adios mundo'),
+            subtitle: const Text('Diferentes widgets para entradas de flutter'),
             trailing: const  Icon(Icons.arrow_circle_right),
             ),
             const Divider(),
             ListTile(
-              leading: const Icon(Icons.flight),
-            title: Text('Hola mundo',
+              leading: const Icon(Icons.list_alt_rounded),
+            title: Text('ListView.builder',
               style: Theme.of(context).textTheme.headlineLarge,
               ),
-            subtitle: Text('Adios mundo'),
-            trailing: Icon(Icons.arrow_circle_right),
+            subtitle: const Text('Scroll Infinito'),
+            trailing: const Icon(Icons.arrow_circle_right),
             ),
-            Divider(),
+            const Divider(),
             ListTile(
-              leading: Icon(Icons.ac_unit_sharp),
-            title: Text('Hola mundo'),
-            subtitle: Text('Adios mundo'),
-            trailing: Icon(Icons.arrow_circle_right),
+              leading: const Icon(Icons.notification_add),
+            title: Text('Notificaciones',
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+            subtitle: const Text('Creación de notificaciones'),
+            trailing: const Icon(Icons.arrow_circle_right),
             )
 
           ],
