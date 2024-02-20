@@ -5,6 +5,8 @@ class AppTheme{
   //Declaraciones de color
   static const mainColor = Color.fromARGB(255, 153, 210, 226);
   static const backColor =  Color.fromARGB(255, 199, 210, 214);
+  static const accentColor =  Color.fromARGB(255, 142, 142, 255);
+  static const iconColor =  Color.fromARGB(255, 247, 0, 0);
 
   //Declaraciones del tema claro
   static final ThemeData lightTheme = ThemeData.light().copyWith(
@@ -20,7 +22,15 @@ class AppTheme{
         decorationStyle: TextDecorationStyle.solid,
         decorationThickness: 1.0,
         fontStyle: FontStyle.italic
-      )
+      ),
+        bodySmall: GoogleFonts.merienda(
+        color: accentColor,
+        fontSize: 15.0,
+        fontWeight: FontWeight.w500,
+        decorationColor: Colors.black,
+        decorationThickness: 1.0,
+        fontStyle: FontStyle.italic
+      ),
     )
   );
 }
