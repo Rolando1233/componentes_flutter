@@ -7,11 +7,36 @@ class AppTheme{
   static const backColor =  Color.fromARGB(255, 199, 210, 214);
   static const accentColor =  Color.fromARGB(255, 142, 142, 255);
   static const iconColor =  Color.fromARGB(255, 247, 0, 0);
+  static const barColor = Color.fromARGB(255, 0, 0, 0);
+  static const bartextColor = Color.fromARGB(255, 255, 255, 255);
 
   //Declaraciones del tema claro
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
-    appBarTheme: const AppBarTheme(color: mainColor),
+    appBarTheme:  AppBarTheme(
+      color: mainColor,
+      titleTextStyle: GoogleFonts.lato(
+        color: barColor,
+        fontSize: 28.5,
+        fontWeight: FontWeight.bold
+      ),
+      ),
+      iconTheme: const IconThemeData(
+        color: accentColor,
+        size: 35.0,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(
+            accentColor),
+          textStyle: MaterialStateProperty.all(
+            GoogleFonts.merienda(
+              color: backColor,
+              fontSize: 22
+            ),
+          ),
+        )
+      ),
     textTheme:  TextTheme(
       headlineLarge: GoogleFonts.merienda(
         color: const Color.fromARGB(255, 4, 4, 64),
