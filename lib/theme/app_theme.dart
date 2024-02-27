@@ -56,6 +56,13 @@ class AppTheme{
         decorationThickness: 1.0,
         fontStyle: FontStyle.italic
       ),
+      headlineMedium: GoogleFonts.merienda(
+        color: const Color.fromARGB(255, 4, 4, 64),
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
+        decorationStyle: TextDecorationStyle.double,
+        decorationThickness: 1,
+      ),
     )
   );
 }
