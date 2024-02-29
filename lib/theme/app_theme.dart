@@ -63,6 +63,14 @@ class AppTheme{
         decorationStyle: TextDecorationStyle.double,
         decorationThickness: 1,
       ),
+      bodyMedium: GoogleFonts.merienda(
+        color: mainColor,
+        fontSize: 15.0,
+        fontWeight: FontWeight.w500,
+        decorationColor: Colors.black,
+        decorationThickness: 1.0,
+        fontStyle: FontStyle.italic
+      ),
     )
   );
 }

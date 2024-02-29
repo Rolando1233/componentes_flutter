@@ -25,6 +25,13 @@ class HomeScreen extends StatelessWidget {
               ),
             subtitle:  Text('Diferentes widgets para entradas de flutter',
               style: Theme.of(context).textTheme.bodySmall),
+            //trailing: const CircularProgressIndicator(
+            //  value: 0.8,
+            //  strokeWidth: 10.0,
+            //  semanticsLabel: "Prueba",
+            //  color: AppTheme.barColor,
+            //  backgroundColor: AppTheme.iconColor,
+            //),
             trailing: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
               child: const Icon (Icons.arrow_circle_right), 
