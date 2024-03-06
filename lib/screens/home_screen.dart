@@ -3,6 +3,7 @@ import 'package:practica3/screens/infinite_list_screen.dart';
 import 'package:practica3/screens/inputs_screen.dart';
 import 'package:practica3/screens/notifications_screen.dart';
 import 'package:practica3/theme/app_theme.dart';
+import 'package:practica3/screens/images_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -85,6 +86,25 @@ class HomeScreen extends StatelessWidget {
                   return const NotificationsScreen();
                 });
                 Navigator.push(context, ruta3);
+              },
+            ),
+            const Divider(),
+            ListTile(
+              leading: IconTheme(
+                data: AppTheme.lightTheme.iconTheme,
+                child: const Icon(Icons.image), ),
+              title: Text(
+                'Imagenes',
+                style: AppTheme.lightTheme.textTheme.headlineLarge,),
+              trailing: IconTheme(
+                data: AppTheme.lightTheme.iconTheme,
+                child: const Icon (Icons.arrow_circle_right), 
+              ),
+              onTap: (){
+                final ruta4 = MaterialPageRoute(builder: (context){
+                  return const ImagesScreen();
+                });
+                Navigator.push(context, ruta4);
               },
             )
           ],
