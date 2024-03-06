@@ -94,8 +94,10 @@ class HomeScreen extends StatelessWidget {
                 data: AppTheme.lightTheme.iconTheme,
                 child: const Icon(Icons.image), ),
               title: Text(
-                'Imagenes',
+                'Imágenes',
                 style: AppTheme.lightTheme.textTheme.headlineLarge,),
+              subtitle: Text('Widget de manejo de imágenes',
+              style: Theme.of(context).textTheme.bodySmall),
               trailing: IconTheme(
                 data: AppTheme.lightTheme.iconTheme,
                 child: const Icon (Icons.arrow_circle_right), 
