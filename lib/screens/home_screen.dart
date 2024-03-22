@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
               ),
               onTap: (){
                 final ruta1 = MaterialPageRoute(builder: (context){
-                  return const InputsScreen();
+                  return const Inputsscreen();
                 });
                 Navigator.push(context, ruta1);
               },
@@ -58,8 +58,8 @@ class HomeScreen extends StatelessWidget {
             trailing: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
               child: const Icon (Icons.arrow_circle_right),
-               ),
-               onTap: (){
+              ),
+              onTap: (){
                 final ruta2 = MaterialPageRoute(builder: (context){
                   return const InfiniteListScreen();
                 });
