@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practica3/screens/infinite_list_screen.dart';
 import 'package:practica3/screens/inputs_screen.dart';
+import 'package:practica3/screens/login_screen.dart';
 import 'package:practica3/screens/notifications_screen.dart';
 import 'package:practica3/theme/app_theme.dart';
 import 'package:practica3/screens/images_screen.dart';
@@ -78,7 +79,7 @@ class HomeScreen extends StatelessWidget {
             subtitle: Text('Creación de notificaciones',
               style: Theme.of(context).textTheme.bodySmall),
             trailing: IconTheme(
-               data: AppTheme.lightTheme.iconTheme,
+              data: AppTheme.lightTheme.iconTheme,
               child: const Icon (Icons.arrow_circle_right), 
               ),
               onTap: (){
@@ -107,6 +108,27 @@ class HomeScreen extends StatelessWidget {
                   return const ImagesScreen();
                 });
                 Navigator.push(context, ruta4);
+              },
+            ),
+            const Divider(),
+            ListTile(
+              leading: IconTheme(
+                data: AppTheme.lightTheme.iconTheme,
+                child: const Icon(Icons.image), ),
+              title: Text(
+                'EvoPark',
+                style: AppTheme.lightTheme.textTheme.headlineLarge,),
+              subtitle: Text('Iniciar App',
+              style: Theme.of(context).textTheme.bodySmall),
+              trailing: IconTheme(
+                data: AppTheme.lightTheme.iconTheme,
+                child: const Icon (Icons.arrow_circle_right), 
+              ),
+              onTap: (){
+                final ruta5 = MaterialPageRoute(builder: (context){
+                  return const LoginScreen();
+                });
+                Navigator.push(context, ruta5);
               },
             )
           ],

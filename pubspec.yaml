@@ -9,9 +9,12 @@ environment:
 dependencies:
   cloud_firestore: ^4.15.8
   firebase_core: ^2.27.0
+  firebase_auth: ^4.17.8
   flutter:
     sdk: flutter
-  google_fonts: ^6.1.0
+  google_fonts: 6.1.0
+  # Opcional, para la gestión del estado
+  flutter_bloc: ^8.0.0 # o provider: ^6.1.0
 
 dev_dependencies:
   flutter_test:

@@ -6,7 +6,7 @@ import 'package:practica3/screens/notifications_screen.dart';
 import 'package:practica3/screens/home_screen.dart';
 
 class ImagesScreen extends StatefulWidget {
-  const ImagesScreen({Key? key}) : super(key: key);
+  const ImagesScreen({super.key});
 
   @override
   State<ImagesScreen> createState() => _ImagesScreenState();

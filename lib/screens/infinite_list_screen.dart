@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/screens/firebase_services.dart';
 import 'package:practica3/screens/inputs_screen.dart';
 import 'package:practica3/theme/app_theme.dart';
 import 'package:practica3/screens/notifications_screen.dart';
@@ -56,15 +57,32 @@ class _InfiniteListScreenState extends State<InfiniteListScreen> {
       appBar: AppBar(
         title: Text('Lista infinita',style: AppTheme.lightTheme.textTheme.headlineLarge,),
       ),
-        body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text('Lista infinita',
-            style: AppTheme.lightTheme.textTheme.headlineLarge,),
-          ),
-        ],
-      ),
+        body: FutureBuilder(
+          future: getMascotas(),
+          builder: ((context, snapshot){
+              if (snapshot.hasData) {
+              return ListView.builder(
+                itemCount: snapshot.data?.length,
+                itemBuilder: (context, index) {
+                  return Center(
+                    child: Text(
+                      snapshot.data?[index]['nombre'],
+                      style: AppTheme.lightTheme.textTheme.headlineMedium,
+                    ),
+                  );
+                },
+              );
+            } else {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+
+          }) 
+        ),
+
+
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex : selectedIndex,
         backgroundColor: const Color.fromARGB(255, 16, 255, 255),

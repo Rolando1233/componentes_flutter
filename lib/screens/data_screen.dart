@@ -11,7 +11,7 @@ import 'package:practica3/theme/app_theme.dart';
 class DataScreen extends StatefulWidget {
   final InputData inputData;
 
-  const DataScreen({Key? key, required this.inputData}) : super(key: key);
+  const DataScreen({super.key, required this.inputData});
 
   @override
   State<DataScreen> createState() => _DataScreenState();
